@@ -1,50 +1,32 @@
-import './user.scss'
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 
+// import './user.scss'
+import Transactions from '../../components/Transactions/Transactions'
+import EditUser from '../../components/EditUser/EditUser'
 
 function User() {
+
+   const token = useSelector((state) => state.auth.token);
+   const navigate = useNavigate();
+
+   // Si l'utilisateur n'est pas connecté, redirection vers la page de connexion
+   useEffect(() => {
+      if (!token) {
+         navigate("/signin");
+      }
+   }, [token, navigate]);
+
    return (
-      <main class="main">
-         <section class="account-header">
-            <h1>Welcome back, Tony Jarvis !</h1>
-         </section>
+      <main className="main">
 
-         <section class="account">
-         <div class="account-content-wrapper">
-            <h2 class="account-title">Argent Bank Checking (x8349)</h2>
-            <p class="account-amount">$2,082.79</p>
-            <p class="account-amount-description">Available Balance</p>
-         </div>
-
-         <div class="account-content-wrapper cta">
-            <button class="transaction-button">View transactions</button>
-         </div>
-         </section>
-
-         <section class="account">
-         <div class="account-content-wrapper">
-            <h2 class="account-title">Argent Bank Savings (x6712)</h2>
-            <p class="account-amount">$10,928.42</p>
-            <p class="account-amount-description">Available Balance</p>
-         </div>
-
-         <div class="account-content-wrapper cta">
-            <button class="transaction-button">View transactions</button>
-         </div>
-         </section>
-
-         <section class="account">
-         <div class="account-content-wrapper">
-            <h2 class="account-title">Argent Bank Credit Card (x8349)</h2>
-            <p class="account-amount">$184.30</p>
-            <p class="account-amount-description">Current Balance</p>
-         </div>
-
-         <div class="account-content-wrapper cta">
-            <button class="transaction-button">View transactions</button>
-         </div>
-         </section>
+         <EditUser />
+         
+         <Transactions />
+      
       </main>
    )
- }
+}
  
- export default User
+export default User

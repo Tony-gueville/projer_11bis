@@ -1,11 +1,10 @@
 // IMPORTS
 import { Link } from 'react-router-dom'
+
 import './header.scss'
+import Account from '../../components/Account/Account'
 
-
-// ASSETS
 import Logo from '../../assets/img/argentBankLogo.png'
-
 
 
 
@@ -18,14 +17,11 @@ function Header() {
                <img className='logo-header' alt='Logo de Argent Bank' src={Logo} />
             </Link>
 
-            <Link to="/signin">
-               <i className="fas fa-user-circle"></i>
-               <p>Sign In</p>
-            </Link>
+            <Account />
 
          </nav>
       </header>
    )
- }
+}
  
- export default Header
+export default Header

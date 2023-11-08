@@ -1,0 +1,136 @@
+swagger: "2.0"
+info:
+  version: "1.0"
+  title: Bank Argent API documentation // Transactions API
+  description: Second part of project 12
+host: localhost:3001
+basePath: /api/v1
+schemes:
+  - http
+paths:
+  /transactions:
+    get:
+      description: Retrieve all transactions for the current month
+      security:
+        - tokenAuth: []
+      responses:
+        200:
+          description: Success. Returns the list of transactions.
+        401:
+          description: Unauthorized. Invalid or missing token.
+        500:
+          description: Server error.
+
+  /transactions/{transactionId}:
+    get:
+      description: Retrieve details of a specific transaction
+      security:
+        - tokenAuth: []
+      parameters:
+        - name: transactionId
+          in: path
+          description: ID of the transaction to retrieve
+          required: true
+          type: string
+      responses:
+        200:
+          description: Success. Returns the details of the specified transaction.
+        401:
+          description: Unauthorized. Invalid or missing token.
+        404:
+          description: Transaction not found.
+        500:
+          description: Server error.
+
+    put:
+      description: Update or add information of a specific transaction
+      security:
+        - tokenAuth: []
+      parameters:
+        - name: transactionId
+          in: path
+          description: ID of the transaction to update
+          required: true
+          type: string
+        - name: transaction
+          in: body
+          description: Object representing the new information of the transaction
+          required: true
+          schema:
+            $ref: "#/definitions/Transaction"
+      responses:
+        200:
+          description: Success. The transaction information has been updated successfully.
+        400:
+          description: Bad request. Please check the provided data.
+        401:
+          description: Unauthorized. Invalid or missing token.
+        404:
+          description: Transaction not found.
+        500:
+          description: Server error.
+
+    delete:
+      description: Delete information of a specific transaction
+      security:
+        - tokenAuth: []
+      parameters:
+        - name: transactionId
+          in: path
+          description: ID of the transaction to delete
+          required: true
+          type: string
+      responses:
+        204:
+          description: Success. The transaction information has been deleted successfully.
+        401:
+          description: Unauthorized. Invalid or missing token.
+        404:
+          description: Transaction not found.
+        500:
+          description: Server error.
+
+  /transactions/{transactionId}:
+    post:
+      description: Add information related to a specific transaction
+      security:
+        - tokenAuth: []
+      parameters:
+        - name: transactionId
+          in: path
+          description: ID of the transaction to add information
+          required: true
+          type: string
+        - name: info
+          in: body
+          description: Object representing the information to be added
+          required: true
+          schema:
+            $ref: "#/definitions/Transaction"
+      responses:
+        201:
+          description: Success. The information has been added successfully.
+        400:
+          description: Bad request. Please check the provided data.
+        401:
+          description: Unauthorized. Invalid or missing token.
+        404:
+          description: Transaction not found.
+        500:
+          description: Server error.
+
+securityDefinitions:
+  tokenAuth:
+    type: apiKey
+    name: Authorization
+    in: header
+    description: Token-based authentication. Provide the token in the format 'Bearer {token}'.
+
+definitions:
+  Transaction:
+    type: object
+    properties:
+      id:
+        type: string
+      description:
+        type: string

@@ -1,0 +1,35 @@
+.cont{
+   &-nav{
+      p, i {
+         margin: 0 3px;
+      }
+   }
+   &-user{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+      @media (min-width: 920px) {
+         margin-bottom: 0px;
+      }
+   }
+}
+.btn-user{
+   color: black;
+   display: flex;
+   text-decoration: none;
+   margin: 7px 15px;
+   padding: 10px 15px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 1rem;
+   background-color: #fff;
+   cursor: pointer;
+   &:hover{
+      background-color: #ccc;
+   }
+   &.active{
+      background-color: #00bc77c5;
+      cursor: default;
+   }
+}
