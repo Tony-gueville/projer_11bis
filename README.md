@@ -1,100 +1,71 @@
-&nbsp;
-# Argent Bank
+# ArgentBank
+Code for the project on APIs and React for Intégrateur Web and JS-React paths.
 
-![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
-![](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
-![](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-![](https://forthebadge.com/images/badges/built-with-love.svg)
-![](https://forthebadge.com/images/badges/powered-by-coffee.svg)
+In the project directory, you can run:
 
-&nbsp;
+### `npm start`
 
-&nbsp;
-## Description
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Projet numéro onze du parcours développeur front-end de chez OpenClassrooms
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-L'objectif était d'implémentez le front-end d'une application bancaire avec React
-> Pour en savoir plus, retrouvez le brief de mission en bas de page
+### `npm test`
 
-&nbsp;
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Compétences évaluées
+### `npm run build`
 
-- Créez une application React complète
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- Afficher les données du back end sur l'interface via des appels API
- 
-- Configurer des routes API pour la communication client / serveur
- 
-- Implémenter la gestion des données avec Redux pour assurer le fonctionnement du front
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-&nbsp;
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-&nbsp;
-## Prérequis
+### `npm run eject`
 
-> - [Node.js v12](https://nodejs.org/en/)
-> - [MongoDB Community Server](https://www.mongodb.com/try/download/community)
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-&nbsp;
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-```bash
-node --version
-mongo --version
-```
-&nbsp;
-> Si vous n'avez pas la bonne version de node, vous pouvez utiliser Node Version Switcher
-> - [Node Version Switcher](https://github.com/jasongin/nvs)
-&nbsp;
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-&nbsp;
+## Learn More
 
-&nbsp;
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Back-end
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-> Cloner le repo en local
+### Code Splitting
 
-> Se rendre dans le dossier ``back-end``
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-> Installer les dépendances: ``yarn install``
+### Analyzing the Bundle Size
 
-> Lancer le serveur: ``yarn run dev:server``
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-> Démarrer la BD: ``yarn run populate-db``
+### Making a Progressive Web App
 
-&nbsp;
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-## Front
-> Installer les dépendances: ``yarn install``
+### Advanced Configuration
 
-> Pour lancer l'application ``yarn start``
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-&nbsp;
+### Deployment
 
-&nbsp;
-## Brief de mission
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
->Créer l’application web complète et responsive avec React. Comme point de départ, nous vous avons fourni le HTML statique et le CSS pour la page d'accueil, la page de connexion et la page de profil.
->Utiliser Redux pour gérer le state de l'ensemble de l'application.
->Ce que doit faire l’application (voir les détails pour chacune des fonctionnalités sur nos modèles de GitHub Issues) :
+### `npm run build` fails to minify
 
->>L'utilisateur peut visiter la page d'accueil.
-
->>L'utilisateur peut se connecter au système.
-
->>L'utilisateur peut se déconnecter du système.
-
->>L'utilisateur ne peut voir les informations relatives à son propre profil qu'après s'être connecté avec succès.
-
->>L’utilisateur ne peut pas modifier son nom ni son prénom, mais il peut modifier son pseudo.
-
->Nos ingénieurs back-end ont déjà créé toutes les routes API dont vous avez besoin. Vous trouverez toute la documentation Swagger à l'intérieur du repo.
-&nbsp;
-
-&nbsp;
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
