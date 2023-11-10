@@ -199,6 +199,19 @@ paths:
           description: Transaction not found.
         501:
           description: Internal Server Error.
+  /transactions/current-month:
+    get:
+      summary: Retrieve transactions for the current month
+      description: Retrieve all transactions for the current month.
+      security:
+        - BearerAuth: []
+      responses:
+        200:
+          description: Successfully retrieved transactions for the current month.
+        400:
+          description: Unauthorized access to retrieve transactions for the current month.
+        501:
+          description: Internal Server Error.
 securityDefinitions:
   BearerAuth:
     type: apiKey

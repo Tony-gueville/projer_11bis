@@ -7,8 +7,8 @@ import Transactions from '../../components/Transactions/Transactions'
 import EditUser from '../../components/EditUser/EditUser'
 
 function User() {
-
-   const token = useSelector((state) => state.auth.token);
+   // hook useSelector pour extraire la valeur du token 
+   const token = useSelector((state) => state.auth.token); 
    const navigate = useNavigate();
 
    // Si l'utilisateur n'est pas connecté, redirection vers la page de connexion

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import './header.scss'
 import Account from '../../components/Account/Account'
 
-import Logo from '../../assets/img/argentBankLogo.png'
+import Logo from '../../assets/img/argentBankLogo.webp'
 
 
 
